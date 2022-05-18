@@ -265,7 +265,7 @@ def sync_endpoint(
             if next_url and not next_url.startswith('http'):
                 next_url = '{}{}'.format(endpoint_config.get('api_url'), next_url)
             
-            LOGGER.debug('Next URL compare %s -- %s',
+            LOGGER.info('Next URL compare %s -- %s',
                          next_url,
                          data.get('next_page_uri'))
 
