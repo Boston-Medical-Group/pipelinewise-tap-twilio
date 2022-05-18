@@ -264,6 +264,10 @@ def sync_endpoint(
                 "pagination") == "meta" else data.get('next_page_uri')
             if next_url and not next_url.startswith('http'):
                 next_url = '{}{}'.format(endpoint_config.get('api_url'), next_url)
+            
+            LOGGER.debug('Next URL compare %s -- %s',
+                         next_url,
+                         data.get('next_page_uri'))
 
             api_total = 0
 
